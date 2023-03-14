@@ -284,7 +284,6 @@ class RPGState extends MusicBeatState
 		var poop = Highscore.formatSong("dummy", 1);
 
 		PlayState.SONG = Song.loadFromJson(poop, name);
-		PlayState.isRPG = true;
 		PlayState.storyDifficulty = 1;
 		LoadingState.loadAndSwitchState(new PlayState());
 	}
@@ -421,7 +420,6 @@ class RPGState extends MusicBeatState
 		}
 
 
-		PlayState.isRPG = false;
 		overBF = new FlxSprite(-80).loadGraphic(Paths.image('boyfriendrpg'));
 		loaded = true;
 		overBF.height *= 2;
@@ -1057,7 +1055,6 @@ class RPGState extends MusicBeatState
 			var poop = Highscore.formatSong(ruinsEnemies[random], 1);
 
 			PlayState.SONG = Song.loadFromJson(poop, ruinsEnemies[random]);
-			PlayState.isRPG = true;
 			PlayState.storyDifficulty = 1;
 			LoadingState.loadAndSwitchState(new PlayState());
 		}
